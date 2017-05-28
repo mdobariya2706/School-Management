@@ -1,0 +1,2 @@
+# School-Management
+It's a Angular with PHP Single Page Application. This system developed using AngularJS1.2.25, PHP OOPs, MYSQL, Bootstrap and Google Material Icons.   Functionality included Registration, Login, Add Student, Add Class, Assign Class and Subjects to Student, Update Profile, Add Grades and Monitor Student.
