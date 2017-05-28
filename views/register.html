@@ -1,0 +1,76 @@
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        
+    
+<form name="myregisterform" class="form-signin" ng-submit="register()"
+    novalidate>
+        <h4 class="alert alert-info">Sign up to create your profile</h4>
+        
+           <p class="text-danger" ng-show="invalidmessage">{{invalidmessage}}</p>
+           <div class="form-group">
+           <label for="inputEmail" class="sr-only">Name</label>
+        <input class="form-control" type="text" name="name" placeholder="Name"
+      ng-model="user.name" ng-required="true">
+      <p class="text-danger"
+      ng-show="myregisterform.name.$invalid && myregisterform.name.$touched">
+       Name required</p>
+             </div>
+           <div class="form-group">
+             <label for="inputPassword" class="sr-only">Username</label>
+             <input class="form-control" type="text" name="username" placeholder="username"
+      ng-model="user.username" ng-required="true">
+      <p class="text-danger"
+      ng-show="myregisterform.username.$invalid && myregisterform.username.$touched">
+      User name required</p>
+        </div>
+           <div class="form-group">
+             <label for="inputPassword" class="sr-only">Email</label>
+             <input class="form-control" type="email" name="email" placeholder="Email" 
+                    ng-model="user.email" ng-required="true">
+      <p class="text-danger"
+      ng-show="myregisterform.email.$invalid && myregisterform.email.$touched">
+      Must be a valid email</p>
+        </div>
+           <div class="form-group">
+             <label for="inputPassword" class="sr-only">Password</label>
+              <input class="form-control" type="password" name="password" placeholder="Password"
+      ng-model="user.password" ng-required="true" ng-minlength='5'>
+      <p class="text-danger"
+      ng-show="myregisterform.password.$invalid && myregisterform.password.$touched">
+      Password needs to be atleast five characters</p>
+        </div>
+            <div class="form-group">
+             <label for="inputPassword" class="sr-only">Confirm Password</label>
+              <input class="form-control" type="password" name="confirmpassword" placeholder="Confirm Password"
+      ng-model="user.confirmpassword" ng-required="true"  password-match="user.password">
+      <p class="text-danger"
+      ng-show="myregisterform.confirmpassword.$touched && myregisterform.confirmpassword.$error.required">
+      Enter password again</p>
+      <p class="text-danger"
+      ng-show="myregisterform.confirmpassword.$touched && myregisterform.confirmpassword.$error.passwordNotMatch && !myregisterform.confirmpassword.$error.required">
+      Password doesn't match</p>
+        </div>
+           <div class="form-group">
+             <label for="inputPassword" class="sr-only">Location</label>
+            <input class="form-control" type="text" name="location" placeholder="Location"
+      ng-model="user.location" ng-required="true">
+      <p class="text-danger"
+      ng-show="myregisterform.location.$invalid && myregisterform.location.$touched">
+      Location is required</p>
+        </div>
+           <div class="form-group">
+             <label for="inputPassword" class="sr-only">Phone</label>
+             <input class="form-control" type="text" name="phone" placeholder="Phone"
+      ng-model="user.contact_no" ng-required="true">
+      <p class="text-danger"
+      ng-show="myregisterform.phone.$invalid && myregisterform.phone.$touched">
+      Phone is required</p>
+        </div>
+           <button class="btn btn-lg btn-primary btn-block" type="submit" 
+    ng-disabled="myregisterform.$invalid">Register</button>
+   
+        
+      </form>
+
+    </div>
+</div>

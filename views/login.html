@@ -1,0 +1,29 @@
+ <div class="container">
+     <div class="row">
+         <div class="col-md-4 col-md-offset-4">
+             <form name="myform" class="form-signin" novalidate="" ng-submit="login()">
+        <h4 class="text-info">log-in to see your profile!</h4>
+         <p class="alert alert-danger" ng-show="message">{{message}}</p>
+           <p class="alert alert-danger" ng-show="invalidmessage">{{invalidmessage}}</p>
+           <div class="form-group">
+           <label for="inputEmail" class="sr-only">Email address</label>
+        <input class="form-control" type="email" name="email" placeholder="Email" ng-model="user.email" ng-required="true">
+             <p class="text-danger"
+      ng-show="myform.email.$invalid && myform.email.$touched">
+      Email must be valid</p>
+             </div>
+           <div class="form-group">
+             <label for="inputPassword" class="sr-only">Password</label>
+             <input class="form-control" type="password" name="password" placeholder="Password" ng-model="user.password" ng-required="true">
+        <p class="text-danger"
+      ng-show="myform.password.$invalid && myform.password.$touched">
+      Password is required</p> 
+        </div>
+         <button type="submit" class="btn btn-lg btn-primary btn-block" ng-disabled="myform.$invalid">Login</button>
+        <p ng-hide="authenticated">or <a ng-href="#/register">Register</a></p>
+      </form>
+         </div>
+     </div>
+      
+
+    </div> <!-- /container -->
